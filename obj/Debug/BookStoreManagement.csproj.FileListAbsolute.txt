@@ -34,9 +34,11 @@ D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewHome.res
 D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewLogin.resources
 D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.exe.licenses
 D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewDashboard.resources
-D:\Kuliah C#\BookStoreManagement\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
 D:\Kuliah C#\BookStoreManagement\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.dll
 D:\Kuliah C#\BookStoreManagement\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll
-D:\Kuliah C#\BookStoreManagement\bin\Debug\Bunifu.Licensing.dll
 D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewCategory.resources
-D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewProduct.resources
+D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewBook.resources
+D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.viewPublisher.resources
+D:\Kuliah C#\BookStoreManagement\bin\Debug\Bunifu_UI_v1.52.dll
+D:\Kuliah C#\BookStoreManagement\bin\Debug\Bunifu.Licensing.dll
+D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewCustomer.resources

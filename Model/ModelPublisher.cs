@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace BookStoreManagement.Model
 {
-    class ModelCategory
+    class ModelPublisher
     {
         ModelConnection db = new ModelConnection();
-        public DataGridView tempDataCategory;
+        public DataGridView tempDataPublisher;
         public string idTemp { get; set; }
-        public string idCategoryTemp { get; set; }
-        public string nameCategoryTemp { get; set; }
-        public int indexCategory { get; set; }
-        public DataTable dataTempCategory = new DataTable();
-        public void updateIdCategory()
+        public string idPublisherTemp { get; set; }
+        public string namePublisherTemp { get; set; }
+        public int indexPublisher { get; set; }
+        public DataTable dataTempPublisher = new DataTable();
+        public void updateIdPublisher()
         {
             long id;
             string temp;
@@ -26,41 +26,41 @@ namespace BookStoreManagement.Model
             MySqlDataReader dr;
             MySqlCommand cmd = db.konek().CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select catid from db_categories where catid in(select max(catid) from db_categories) order by catid desc";
+            cmd.CommandText = "select pubid from db_publisher where pubid in(select max(pubid) from db_publisher) order by pubid desc";
             dr = cmd.ExecuteReader();
             dr.Read();
             if (dr.HasRows)
             {
-                id = Convert.ToInt64(dr[0].ToString().Substring(dr["catid"].ToString().Length - 4, 4)) + 1;
+                id = Convert.ToInt64(dr[0].ToString().Substring(dr["pubid"].ToString().Length - 4, 4)) + 1;
                 string idTemp = "0000" + id;
-                temp = "CAT" + idTemp.Substring(idTemp.Length - 4, 4);
+                temp = "PUB" + idTemp.Substring(idTemp.Length - 4, 4);
             }
             else
             {
-                temp = "CAT0001";
+                temp = "PUB0001";
             }
             dr.Close();
             idTemp = temp;
             db.closeCon();
         }
-        public void updateDataCategory()
+        public void updateDataPublisher()
         {
             db.openCon();
             MySqlCommand cmd = db.konek().CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * From db_categories";
+            cmd.CommandText = "Select * From db_publisher";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             da.Fill(dt);
-            dataTempCategory = dt;
+            dataTempPublisher = dt;
             db.closeCon();
         }
-        public void saveDataCategory()
+        public void saveDataPublisher()
         {
             try
             {
-                if (idCategoryTemp == "" || nameCategoryTemp == "")
+                if (idPublisherTemp == "" || namePublisherTemp == "")
                 {
                     MessageBox.Show("Silahkan isi data terlebih dahulu ", "Coba Lagi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -68,8 +68,8 @@ namespace BookStoreManagement.Model
                 else
                 {
                     db.openCon();
-                    String str = "Insert Into db_categories (catid,catname)Values('" + idCategoryTemp + "','" + nameCategoryTemp + "')";
-                    String str2 = "Select max(catid) From db_categories";
+                    String str = "Insert Into db_publisher (pubid,pubname)Values('" + idPublisherTemp + "','" + namePublisherTemp + "')";
+                    String str2 = "Select max(pubid) From db_publisher";
                     MySqlCommand cmd = db.konek().CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
@@ -91,11 +91,11 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void editDataCategory()
+        public void editDataPublisher()
         {
             try
             {
-                if (idCategoryTemp == "" || nameCategoryTemp == "")
+                if (idPublisherTemp == "" || namePublisherTemp == "")
                 {
                     MessageBox.Show("Silahkan isi data terlebih dahulu ", "Coba Lagi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -103,8 +103,8 @@ namespace BookStoreManagement.Model
                 else
                 {
                     db.openCon();
-                    String str = "Update db_categories Set catname = '" + nameCategoryTemp + "' Where catid = '" + idCategoryTemp + "'";
-                    String str2 = "Select max(catid) From db_categories";
+                    String str = "Update db_publisher Set pubname = '" + namePublisherTemp + "' Where pubid = '" + idPublisherTemp + "'";
+                    String str2 = "Select max(pubid) From db_publisher";
                     MySqlCommand cmd = db.konek().CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
@@ -126,11 +126,11 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void removeDataCategory()
+        public void removeDataPublisher()
         {
             try
             {
-                if (idCategoryTemp == "" || nameCategoryTemp == "")
+                if (idPublisherTemp == "" || namePublisherTemp == "")
                 {
                     MessageBox.Show("Silahkan isi data terlebih dahulu ", "Coba Lagi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -138,7 +138,7 @@ namespace BookStoreManagement.Model
                 else
                 {
                     db.openCon();
-                    String str = "Delete From db_categories Where catid = '" + idCategoryTemp + "'";
+                    String str = "Delete From db_publisher Where pubid = '" + idPublisherTemp + "'";
                     MySqlCommand cmd = db.konek().CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
@@ -152,20 +152,20 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void searchIdCategory()
+        public void searchIdPublisher()
         {
             try
             {
                 db.openCon();
-                String str = "Select catid,catname From db_categories Where catid = '" + idCategoryTemp + "'";
+                String str = "Select pubid,pubname From db_publisher Where pubid = '" + idPublisherTemp + "'";
                 MySqlCommand cmd = db.konek().CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = str;
                 MySqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    idCategoryTemp = dr.GetValue(0).ToString();
-                    nameCategoryTemp = dr.GetValue(1).ToString();
+                    idPublisherTemp = dr.GetValue(0).ToString();
+                    namePublisherTemp = dr.GetValue(1).ToString();
                 }
                 db.closeCon();
             }
@@ -174,20 +174,20 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void searchNameCategory()
+        public void searchNamePublisher()
         {
             try
             {
                 db.openCon();
-                String str = "Select catid,catname From db_categories Where catname = '" + nameCategoryTemp + "'";
+                String str = "Select pubid,pubname From db_publisher Where pubname = '" + namePublisherTemp + "'";
                 MySqlCommand cmd = db.konek().CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = str;
                 MySqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    idCategoryTemp = dr.GetValue(0).ToString();
-                    nameCategoryTemp = dr.GetValue(1).ToString();
+                    idPublisherTemp = dr.GetValue(0).ToString();
+                    namePublisherTemp = dr.GetValue(1).ToString();
                 }
                 db.closeCon();
             }
@@ -196,13 +196,13 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void cellDataCategory()
+        public void cellDataPublisher()
         {
             try
             {
-                DataGridViewRow dataTemp = tempDataCategory.Rows[indexCategory];
-                idCategoryTemp = dataTemp.Cells[0].Value.ToString();
-                nameCategoryTemp = dataTemp.Cells[1].Value.ToString();
+                DataGridViewRow dataTemp = tempDataPublisher.Rows[indexPublisher];
+                idPublisherTemp = dataTemp.Cells[0].Value.ToString();
+                namePublisherTemp = dataTemp.Cells[1].Value.ToString();
             }
             catch (Exception ex)
             {

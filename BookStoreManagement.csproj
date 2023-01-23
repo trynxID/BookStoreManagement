@@ -39,14 +39,14 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.1.5.3">
-      <HintPath>..\..\RAR\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
-    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
       <HintPath>..\..\RAR\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
       <HintPath>..\..\RAR\BunifuCrack-main\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>F:\Downloads\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
@@ -97,13 +97,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ControllerBook.cs" />
     <Compile Include="Controller\ControllerCategory.cs" />
+    <Compile Include="Controller\ControllerCustomer.cs" />
     <Compile Include="Controller\ControllerDashboard.cs" />
     <Compile Include="Controller\ControllerLogin.cs" />
+    <Compile Include="Controller\ControllerPublisher.cs" />
+    <Compile Include="Model\ModelBook.cs" />
     <Compile Include="Model\ModelCategory.cs" />
     <Compile Include="Model\ModelConnection.cs" />
+    <Compile Include="Model\ModelCustomer.cs" />
     <Compile Include="Model\ModelDashboard.cs" />
     <Compile Include="Model\ModelLogin.cs" />
+    <Compile Include="Model\ModelPublisher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\ViewCategory.cs">
@@ -154,11 +160,17 @@
     <Compile Include="View\ViewOrder.Designer.cs">
       <DependentUpon>ViewOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewProduct.cs">
+    <Compile Include="View\ViewBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\ViewProduct.Designer.cs">
-      <DependentUpon>ViewProduct.cs</DependentUpon>
+    <Compile Include="View\ViewBook.Designer.cs">
+      <DependentUpon>ViewBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewPublisher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewPublisher.Designer.cs">
+      <DependentUpon>ViewPublisher.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -173,6 +185,9 @@
     <EmbeddedResource Include="View\ViewCategory.resx">
       <DependentUpon>ViewCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewCustomer.resx">
+      <DependentUpon>ViewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ViewDashboard.resx">
       <DependentUpon>ViewDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,8 +197,11 @@
     <EmbeddedResource Include="View\ViewLogin.resx">
       <DependentUpon>ViewLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ViewProduct.resx">
-      <DependentUpon>ViewProduct.cs</DependentUpon>
+    <EmbeddedResource Include="View\ViewBook.resx">
+      <DependentUpon>ViewBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewPublisher.resx">
+      <DependentUpon>ViewPublisher.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

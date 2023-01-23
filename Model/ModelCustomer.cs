@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace BookStoreManagement.Model
 {
-    class ModelCategory
+    class ModelCustomer
     {
         ModelConnection db = new ModelConnection();
-        public DataGridView tempDataCategory;
+        public DataGridView tempDataCustomer;
         public string idTemp { get; set; }
-        public string idCategoryTemp { get; set; }
-        public string nameCategoryTemp { get; set; }
-        public int indexCategory { get; set; }
-        public DataTable dataTempCategory = new DataTable();
-        public void updateIdCategory()
+        public string idCustomerTemp { get; set; }
+        public string nameCustomerTemp { get; set; }
+        public string contactCustomerTemp { get; set; }
+        public string addressCustomerTemp { get; set; }
+
+        public int indexCustomer { get; set; }
+        public DataTable dataTempCustomer = new DataTable();
+        public void updateIdCustomer()
         {
             long id;
             string temp;
@@ -26,41 +29,41 @@ namespace BookStoreManagement.Model
             MySqlDataReader dr;
             MySqlCommand cmd = db.konek().CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select catid from db_categories where catid in(select max(catid) from db_categories) order by catid desc";
+            cmd.CommandText = "select cusid from db_customers where cusid in(select max(cusid) from db_customers) order by cusid desc";
             dr = cmd.ExecuteReader();
             dr.Read();
             if (dr.HasRows)
             {
-                id = Convert.ToInt64(dr[0].ToString().Substring(dr["catid"].ToString().Length - 4, 4)) + 1;
+                id = Convert.ToInt64(dr[0].ToString().Substring(dr["cusid"].ToString().Length - 4, 4)) + 1;
                 string idTemp = "0000" + id;
-                temp = "CAT" + idTemp.Substring(idTemp.Length - 4, 4);
+                temp = "CUS" + idTemp.Substring(idTemp.Length - 4, 4);
             }
             else
             {
-                temp = "CAT0001";
+                temp = "CUS0001";
             }
             dr.Close();
             idTemp = temp;
             db.closeCon();
         }
-        public void updateDataCategory()
+        public void updateDataCustomer()
         {
             db.openCon();
             MySqlCommand cmd = db.konek().CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * From db_categories";
+            cmd.CommandText = "Select * From db_customers";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             da.Fill(dt);
-            dataTempCategory = dt;
+            dataTempCustomer = dt;
             db.closeCon();
         }
-        public void saveDataCategory()
+        public void saveDataCustomer()
         {
             try
             {
-                if (idCategoryTemp == "" || nameCategoryTemp == "")
+                if (idCustomerTemp == "" || nameCustomerTemp == "" || contactCustomerTemp == "" || addressCustomerTemp == "")
                 {
                     MessageBox.Show("Silahkan isi data terlebih dahulu ", "Coba Lagi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -68,8 +71,8 @@ namespace BookStoreManagement.Model
                 else
                 {
                     db.openCon();
-                    String str = "Insert Into db_categories (catid,catname)Values('" + idCategoryTemp + "','" + nameCategoryTemp + "')";
-                    String str2 = "Select max(catid) From db_categories";
+                    String str = "Insert Into db_customers (cusid,cusname,cuscontact,cusaddress)Values('" + idCustomerTemp + "','" + nameCustomerTemp + "','" + contactCustomerTemp + "','" + addressCustomerTemp + "')";
+                    String str2 = "Select max(cusid) From db_customers";
                     MySqlCommand cmd = db.konek().CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
@@ -81,7 +84,7 @@ namespace BookStoreManagement.Model
                     MySqlDataReader dr = cmd2.ExecuteReader();
                     if (dr.Read())
                     {
-                        MessageBox.Show("Kategori berhasil dibuat", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Customer berhasil ditambahkan", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         db.closeCon();
                     }
                 }
@@ -91,11 +94,11 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void editDataCategory()
+        public void editDataCustomer()
         {
             try
             {
-                if (idCategoryTemp == "" || nameCategoryTemp == "")
+                if (idCustomerTemp == "" || nameCustomerTemp == "" || contactCustomerTemp == "" || addressCustomerTemp == "")
                 {
                     MessageBox.Show("Silahkan isi data terlebih dahulu ", "Coba Lagi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -103,8 +106,8 @@ namespace BookStoreManagement.Model
                 else
                 {
                     db.openCon();
-                    String str = "Update db_categories Set catname = '" + nameCategoryTemp + "' Where catid = '" + idCategoryTemp + "'";
-                    String str2 = "Select max(catid) From db_categories";
+                    String str = "Update db_customers Set cusname = '" + nameCustomerTemp + "', cuscontact = '" + contactCustomerTemp + "', cusaddress = '" + addressCustomerTemp + "' Where cusid = '" + idCustomerTemp + "'";
+                    String str2 = "Select max(cusid) From db_customers";
                     MySqlCommand cmd = db.konek().CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
@@ -116,7 +119,7 @@ namespace BookStoreManagement.Model
                     MySqlDataReader dr = cmd2.ExecuteReader();
                     if (dr.Read())
                     {
-                        MessageBox.Show("Kategori telah diperbaharui", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Customer telah diperbaharui", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         db.closeCon();
                     }
                 }
@@ -126,11 +129,11 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void removeDataCategory()
+        public void removeDataCustomer()
         {
             try
             {
-                if (idCategoryTemp == "" || nameCategoryTemp == "")
+                if (idCustomerTemp == "" || nameCustomerTemp == "" || contactCustomerTemp == "" || addressCustomerTemp == "")
                 {
                     MessageBox.Show("Silahkan isi data terlebih dahulu ", "Coba Lagi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -138,12 +141,12 @@ namespace BookStoreManagement.Model
                 else
                 {
                     db.openCon();
-                    String str = "Delete From db_categories Where catid = '" + idCategoryTemp + "'";
+                    String str = "Delete From db_customers Where cusid = '" + idCustomerTemp + "'";
                     MySqlCommand cmd = db.konek().CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Kategori telah dihapus", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Customer telah dihapus", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     db.closeCon();
                 }
             }
@@ -152,20 +155,22 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void searchIdCategory()
+        public void searchIdCustomer()
         {
             try
             {
                 db.openCon();
-                String str = "Select catid,catname From db_categories Where catid = '" + idCategoryTemp + "'";
+                String str = "Select cusid,cusname,cuscontact,cusaddress From db_customers Where cusid = '" + idCustomerTemp + "'";
                 MySqlCommand cmd = db.konek().CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = str;
                 MySqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    idCategoryTemp = dr.GetValue(0).ToString();
-                    nameCategoryTemp = dr.GetValue(1).ToString();
+                    idCustomerTemp = dr.GetValue(0).ToString();
+                    nameCustomerTemp = dr.GetValue(1).ToString();
+                    contactCustomerTemp = dr.GetValue(2).ToString();
+                    addressCustomerTemp = dr.GetValue(3).ToString();
                 }
                 db.closeCon();
             }
@@ -174,20 +179,22 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void searchNameCategory()
+        public void searchNameCustomer()
         {
             try
             {
                 db.openCon();
-                String str = "Select catid,catname From db_categories Where catname = '" + nameCategoryTemp + "'";
+                String str = "Select cusid,cusname From db_customers Where cusname = '" + nameCustomerTemp + "'";
                 MySqlCommand cmd = db.konek().CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = str;
                 MySqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    idCategoryTemp = dr.GetValue(0).ToString();
-                    nameCategoryTemp = dr.GetValue(1).ToString();
+                    idCustomerTemp = dr.GetValue(0).ToString();
+                    nameCustomerTemp = dr.GetValue(1).ToString();
+                    contactCustomerTemp = dr.GetValue(2).ToString();
+                    addressCustomerTemp = dr.GetValue(3).ToString();
                 }
                 db.closeCon();
             }
@@ -196,13 +203,15 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void cellDataCategory()
+        public void cellDataCustomer()
         {
             try
             {
-                DataGridViewRow dataTemp = tempDataCategory.Rows[indexCategory];
-                idCategoryTemp = dataTemp.Cells[0].Value.ToString();
-                nameCategoryTemp = dataTemp.Cells[1].Value.ToString();
+                DataGridViewRow dataTemp = tempDataCustomer.Rows[indexCustomer];
+                idCustomerTemp = dataTemp.Cells[0].Value.ToString();
+                nameCustomerTemp = dataTemp.Cells[1].Value.ToString();
+                contactCustomerTemp = dataTemp.Cells[2].Value.ToString();
+                addressCustomerTemp = dataTemp.Cells[3].Value.ToString();
             }
             catch (Exception ex)
             {

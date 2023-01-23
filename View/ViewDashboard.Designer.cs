@@ -30,7 +30,6 @@ namespace BookStoreManagement.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.lblTotalOrder = new System.Windows.Forms.Label();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -52,6 +51,7 @@ namespace BookStoreManagement.View
             this.bunifuShadowPanel10 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuShadowPanel1.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             this.bunifuShadowPanel3.SuspendLayout();
@@ -63,11 +63,6 @@ namespace BookStoreManagement.View
             this.bunifuShadowPanel9.SuspendLayout();
             this.bunifuShadowPanel10.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 20;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // bunifuShadowPanel1
             // 
@@ -434,6 +429,11 @@ namespace BookStoreManagement.View
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // ViewDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,7 +464,6 @@ namespace BookStoreManagement.View
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel5;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel6;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
@@ -486,5 +485,6 @@ namespace BookStoreManagement.View
         public System.Windows.Forms.Label lblTotalProduct;
         public System.Windows.Forms.Label lblTotalCustomer;
         private System.Windows.Forms.Button btnRefresh;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

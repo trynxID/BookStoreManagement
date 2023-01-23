@@ -43,7 +43,7 @@ namespace BookStoreManagement.View
         {
             SidePanel.Height = btnProducts.Height;
             SidePanel.Top = btnProducts.Top;
-            viewProduct.BringToFront();
+            viewBook.BringToFront();
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
@@ -78,6 +78,118 @@ namespace BookStoreManagement.View
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnPublisher_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnPublisher.Height;
+            SidePanel.Top = btnPublisher.Top;
+            viewPublisher.BringToFront();
+        }
+
+        private void panelKonten_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void viewPublisher_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewCategory_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewCheckout_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewOrder_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewBook_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_sellers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SidePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Help_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

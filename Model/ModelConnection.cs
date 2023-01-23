@@ -13,7 +13,7 @@ namespace BookStoreManagement.Model
     {
         private MySqlConnection conn;
         private MySqlCommand command;
-        public string data = "server=localhost;port=3306;username=root;password=;database=bookstore";
+        public string data = "server=localhost;port=3306;username=root;password=;database=bookstoremanagement";
         public MySqlConnection konek()
         {
             return conn;
