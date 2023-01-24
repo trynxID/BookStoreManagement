@@ -33,7 +33,6 @@ namespace BookStoreManagement.View
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewHome));
             this.panelKonten = new System.Windows.Forms.Panel();
-            this.viewCustomer = new BookStoreManagement.View.ViewCustomer();
             this.viewEmployee = new BookStoreManagement.View.ViewEmployee();
             this.viewOrder = new BookStoreManagement.View.ViewOrder();
             this.viewBook = new BookStoreManagement.View.ViewBook();
@@ -41,7 +40,8 @@ namespace BookStoreManagement.View
             this.viewDashboard = new BookStoreManagement.View.ViewDashboard();
             this.viewCategory = new BookStoreManagement.View.ViewCategory();
             this.viewCheckout = new BookStoreManagement.View.ViewCheckout();
-            this.btn_sellers = new System.Windows.Forms.Button();
+            this.viewCustomer = new BookStoreManagement.View.ViewCustomer();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPublisher = new System.Windows.Forms.Button();
             this.btnCheckout = new System.Windows.Forms.Button();
@@ -71,7 +71,6 @@ namespace BookStoreManagement.View
             // 
             // panelKonten
             // 
-            this.panelKonten.Controls.Add(this.viewCustomer);
             this.panelKonten.Controls.Add(this.viewEmployee);
             this.panelKonten.Controls.Add(this.viewOrder);
             this.panelKonten.Controls.Add(this.viewBook);
@@ -79,20 +78,12 @@ namespace BookStoreManagement.View
             this.panelKonten.Controls.Add(this.viewDashboard);
             this.panelKonten.Controls.Add(this.viewCategory);
             this.panelKonten.Controls.Add(this.viewCheckout);
+            this.panelKonten.Controls.Add(this.viewCustomer);
             this.panelKonten.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelKonten.Location = new System.Drawing.Point(271, 65);
             this.panelKonten.Name = "panelKonten";
             this.panelKonten.Size = new System.Drawing.Size(1085, 693);
             this.panelKonten.TabIndex = 29;
-            this.panelKonten.Paint += new System.Windows.Forms.PaintEventHandler(this.panelKonten_Paint);
-            // 
-            // viewCustomer
-            // 
-            this.viewCustomer.Location = new System.Drawing.Point(1, 1);
-            this.viewCustomer.Name = "viewCustomer";
-            this.viewCustomer.Size = new System.Drawing.Size(1085, 693);
-            this.viewCustomer.TabIndex = 3;
-            this.viewCustomer.Load += new System.EventHandler(this.viewCustomer_Load);
             // 
             // viewEmployee
             // 
@@ -100,7 +91,6 @@ namespace BookStoreManagement.View
             this.viewEmployee.Name = "viewEmployee";
             this.viewEmployee.Size = new System.Drawing.Size(1085, 693);
             this.viewEmployee.TabIndex = 4;
-            this.viewEmployee.Load += new System.EventHandler(this.viewEmployee_Load);
             // 
             // viewOrder
             // 
@@ -108,7 +98,6 @@ namespace BookStoreManagement.View
             this.viewOrder.Name = "viewOrder";
             this.viewOrder.Size = new System.Drawing.Size(1085, 693);
             this.viewOrder.TabIndex = 5;
-            this.viewOrder.Load += new System.EventHandler(this.viewOrder_Load);
             // 
             // viewBook
             // 
@@ -116,7 +105,6 @@ namespace BookStoreManagement.View
             this.viewBook.Name = "viewBook";
             this.viewBook.Size = new System.Drawing.Size(1085, 693);
             this.viewBook.TabIndex = 6;
-            this.viewBook.Load += new System.EventHandler(this.viewBook_Load);
             // 
             // viewPublisher
             // 
@@ -124,7 +112,6 @@ namespace BookStoreManagement.View
             this.viewPublisher.Name = "viewPublisher";
             this.viewPublisher.Size = new System.Drawing.Size(1089, 693);
             this.viewPublisher.TabIndex = 7;
-            this.viewPublisher.Load += new System.EventHandler(this.viewPublisher_Load);
             // 
             // viewDashboard
             // 
@@ -133,7 +120,6 @@ namespace BookStoreManagement.View
             this.viewDashboard.Name = "viewDashboard";
             this.viewDashboard.Size = new System.Drawing.Size(1085, 693);
             this.viewDashboard.TabIndex = 0;
-            this.viewDashboard.Load += new System.EventHandler(this.viewDashboard_Load);
             // 
             // viewCategory
             // 
@@ -142,7 +128,6 @@ namespace BookStoreManagement.View
             this.viewCategory.Name = "viewCategory";
             this.viewCategory.Size = new System.Drawing.Size(1085, 691);
             this.viewCategory.TabIndex = 1;
-            this.viewCategory.Load += new System.EventHandler(this.viewCategory_Load);
             // 
             // viewCheckout
             // 
@@ -150,31 +135,37 @@ namespace BookStoreManagement.View
             this.viewCheckout.Name = "viewCheckout";
             this.viewCheckout.Size = new System.Drawing.Size(1085, 693);
             this.viewCheckout.TabIndex = 2;
-            this.viewCheckout.Load += new System.EventHandler(this.viewCheckout_Load);
             // 
-            // btn_sellers
+            // viewCustomer
             // 
-            this.btn_sellers.FlatAppearance.BorderSize = 0;
-            this.btn_sellers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sellers.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sellers.ForeColor = System.Drawing.Color.White;
-            this.btn_sellers.Image = ((System.Drawing.Image)(resources.GetObject("btn_sellers.Image")));
-            this.btn_sellers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sellers.Location = new System.Drawing.Point(16, 576);
-            this.btn_sellers.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_sellers.Name = "btn_sellers";
-            this.btn_sellers.Size = new System.Drawing.Size(248, 50);
-            this.btn_sellers.TabIndex = 8;
-            this.btn_sellers.Text = "   Employee";
-            this.btn_sellers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_sellers.UseVisualStyleBackColor = true;
-            this.btn_sellers.Click += new System.EventHandler(this.btn_sellers_Click);
+            this.viewCustomer.Location = new System.Drawing.Point(1, 1);
+            this.viewCustomer.Name = "viewCustomer";
+            this.viewCustomer.Size = new System.Drawing.Size(1085, 693);
+            this.viewCustomer.TabIndex = 3;
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.Location = new System.Drawing.Point(16, 576);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(248, 50);
+            this.btnEmployee.TabIndex = 8;
+            this.btnEmployee.Text = "   Employee";
+            this.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.btnPublisher);
-            this.panel1.Controls.Add(this.btn_sellers);
+            this.panel1.Controls.Add(this.btnEmployee);
             this.panel1.Controls.Add(this.btnCheckout);
             this.panel1.Controls.Add(this.btnOrders);
             this.panel1.Controls.Add(this.btnCustomers);
@@ -190,7 +181,6 @@ namespace BookStoreManagement.View
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(271, 693);
             this.panel1.TabIndex = 25;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnPublisher
             // 
@@ -236,10 +226,10 @@ namespace BookStoreManagement.View
             this.btnOrders.ForeColor = System.Drawing.Color.White;
             this.btnOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnOrders.Image")));
             this.btnOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrders.Location = new System.Drawing.Point(29, 435);
+            this.btnOrders.Location = new System.Drawing.Point(16, 435);
             this.btnOrders.Margin = new System.Windows.Forms.Padding(4);
             this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(238, 50);
+            this.btnOrders.Size = new System.Drawing.Size(251, 50);
             this.btnOrders.TabIndex = 6;
             this.btnOrders.Text = "   Orders";
             this.btnOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -277,7 +267,7 @@ namespace BookStoreManagement.View
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(251, 50);
             this.btnProducts.TabIndex = 4;
-            this.btnProducts.Text = "   Products";
+            this.btnProducts.Text = "   Books";
             this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProducts.UseVisualStyleBackColor = true;
             this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
@@ -308,7 +298,6 @@ namespace BookStoreManagement.View
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(264, 66);
             this.panel3.TabIndex = 7;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label2
             // 
@@ -320,7 +309,6 @@ namespace BookStoreManagement.View
             this.label2.Size = new System.Drawing.Size(122, 44);
             this.label2.TabIndex = 15;
             this.label2.Text = "Book Store \r\nManagement ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -331,7 +319,6 @@ namespace BookStoreManagement.View
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnExit
             // 
@@ -376,7 +363,6 @@ namespace BookStoreManagement.View
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(13, 50);
             this.SidePanel.TabIndex = 4;
-            this.SidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SidePanel_Paint);
             // 
             // panel2
             // 
@@ -389,7 +375,6 @@ namespace BookStoreManagement.View
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1356, 65);
             this.panel2.TabIndex = 26;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox2
             // 
@@ -414,7 +399,6 @@ namespace BookStoreManagement.View
             this.label1.Size = new System.Drawing.Size(377, 32);
             this.label1.TabIndex = 7;
             this.label1.Text = "Book Store Management System ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel5
             // 
@@ -424,7 +408,6 @@ namespace BookStoreManagement.View
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 758);
             this.panel5.TabIndex = 28;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel4
             // 
@@ -434,7 +417,6 @@ namespace BookStoreManagement.View
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1366, 10);
             this.panel4.TabIndex = 27;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // bunifuElipse1
             // 
@@ -471,7 +453,7 @@ namespace BookStoreManagement.View
         #endregion
 
         private System.Windows.Forms.Panel panelKonten;
-        public System.Windows.Forms.Button btn_sellers;
+        public System.Windows.Forms.Button btnEmployee;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Button btnOrders;

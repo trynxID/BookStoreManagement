@@ -42,3 +42,6 @@ D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.viewPublishe
 D:\Kuliah C#\BookStoreManagement\bin\Debug\Bunifu_UI_v1.52.dll
 D:\Kuliah C#\BookStoreManagement\bin\Debug\Bunifu.Licensing.dll
 D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewCustomer.resources
+D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewEmployee.resources
+D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewCheckout.resources
+D:\Kuliah C#\BookStoreManagement\obj\Debug\BookStoreManagement.View.ViewOrder.resources

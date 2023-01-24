@@ -43,7 +43,7 @@ namespace BookStoreManagement.View
             this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel7 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.lblTotalProduct = new System.Windows.Forms.Label();
+            this.lblTotalBook = new System.Windows.Forms.Label();
             this.bunifuShadowPanel8 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel9 = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -279,7 +279,7 @@ namespace BookStoreManagement.View
             this.bunifuShadowPanel7.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel7.BorderRadius = 10;
             this.bunifuShadowPanel7.BorderThickness = 1;
-            this.bunifuShadowPanel7.Controls.Add(this.lblTotalProduct);
+            this.bunifuShadowPanel7.Controls.Add(this.lblTotalBook);
             this.bunifuShadowPanel7.Controls.Add(this.bunifuShadowPanel8);
             this.bunifuShadowPanel7.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel7.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
@@ -296,16 +296,16 @@ namespace BookStoreManagement.View
             this.bunifuShadowPanel7.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel7.TabIndex = 27;
             // 
-            // lblTotalProduct
+            // lblTotalBook
             // 
-            this.lblTotalProduct.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalProduct.ForeColor = System.Drawing.Color.White;
-            this.lblTotalProduct.Location = new System.Drawing.Point(12, 53);
-            this.lblTotalProduct.Name = "lblTotalProduct";
-            this.lblTotalProduct.Size = new System.Drawing.Size(250, 41);
-            this.lblTotalProduct.TabIndex = 24;
-            this.lblTotalProduct.Text = "00";
-            this.lblTotalProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTotalBook.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBook.ForeColor = System.Drawing.Color.White;
+            this.lblTotalBook.Location = new System.Drawing.Point(12, 53);
+            this.lblTotalBook.Name = "lblTotalBook";
+            this.lblTotalBook.Size = new System.Drawing.Size(250, 41);
+            this.lblTotalBook.TabIndex = 24;
+            this.lblTotalBook.Text = "00";
+            this.lblTotalBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuShadowPanel8
             // 
@@ -340,7 +340,7 @@ namespace BookStoreManagement.View
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(250, 45);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Total Products";
+            this.label3.Text = "Total Books";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuShadowPanel9
@@ -482,7 +482,7 @@ namespace BookStoreManagement.View
         public System.Windows.Forms.Label lblTotalIncome;
         public System.Windows.Forms.Label lblTotalOrder;
         public System.Windows.Forms.Label lblTotalEmployee;
-        public System.Windows.Forms.Label lblTotalProduct;
+        public System.Windows.Forms.Label lblTotalBook;
         public System.Windows.Forms.Label lblTotalCustomer;
         private System.Windows.Forms.Button btnRefresh;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;

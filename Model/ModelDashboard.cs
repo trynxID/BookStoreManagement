@@ -15,7 +15,7 @@ namespace BookStoreManagement.Model
         public string incomeTemp { get; set; }
         public string orderTemp { get; set; }
         public string customerTemp { get; set; }
-        public string productTemp { get; set; }
+        public string bookTemp { get; set; }
         public string employeeTemp { get; set; }
         public void incomeTotal()
         {
@@ -40,7 +40,7 @@ namespace BookStoreManagement.Model
                 db.openCon();
                 MySqlCommand cmd = db.konek().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select Count(invono)From db_orders";
+                cmd.CommandText = "Select Count(invoiceid)From db_orders";
                 orderTemp = Convert.ToString(cmd.ExecuteScalar());
                 db.closeCon();
             }
@@ -65,15 +65,15 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
-        public void productCount()
+        public void bookCount()
         {
             try
             {
                 db.openCon();
                 MySqlCommand cmd = db.konek().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select Count(proid)From db_product";
-                productTemp = Convert.ToString(cmd.ExecuteScalar());
+                cmd.CommandText = "Select Count(bookid)From db_books";
+                bookTemp = Convert.ToString(cmd.ExecuteScalar());
                 db.closeCon();
             }
             catch (Exception ex)
@@ -88,7 +88,7 @@ namespace BookStoreManagement.Model
                 db.openCon();
                 MySqlCommand cmd = db.konek().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select Count(uid)From db_user";
+                cmd.CommandText = "Select Count(empid)From db_employee";
                 employeeTemp = Convert.ToString(cmd.ExecuteScalar());
                 db.closeCon();
             }

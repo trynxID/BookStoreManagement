@@ -99,15 +99,19 @@
   <ItemGroup>
     <Compile Include="Controller\ControllerBook.cs" />
     <Compile Include="Controller\ControllerCategory.cs" />
+    <Compile Include="Controller\ControllerCheckout.cs" />
     <Compile Include="Controller\ControllerCustomer.cs" />
     <Compile Include="Controller\ControllerDashboard.cs" />
+    <Compile Include="Controller\ControllerEmployee.cs" />
     <Compile Include="Controller\ControllerLogin.cs" />
     <Compile Include="Controller\ControllerPublisher.cs" />
     <Compile Include="Model\ModelBook.cs" />
     <Compile Include="Model\ModelCategory.cs" />
+    <Compile Include="Model\ModelCheckout.cs" />
     <Compile Include="Model\ModelConnection.cs" />
     <Compile Include="Model\ModelCustomer.cs" />
     <Compile Include="Model\ModelDashboard.cs" />
+    <Compile Include="Model\ModelEmployee.cs" />
     <Compile Include="Model\ModelLogin.cs" />
     <Compile Include="Model\ModelPublisher.cs" />
     <Compile Include="Program.cs" />
@@ -185,11 +189,17 @@
     <EmbeddedResource Include="View\ViewCategory.resx">
       <DependentUpon>ViewCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewCheckout.resx">
+      <DependentUpon>ViewCheckout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ViewCustomer.resx">
       <DependentUpon>ViewCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewDashboard.resx">
       <DependentUpon>ViewDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewEmployee.resx">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewHome.resx">
       <DependentUpon>ViewHome.cs</DependentUpon>
@@ -199,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewBook.resx">
       <DependentUpon>ViewBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewOrder.resx">
+      <DependentUpon>ViewOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewPublisher.resx">
       <DependentUpon>ViewPublisher.cs</DependentUpon>

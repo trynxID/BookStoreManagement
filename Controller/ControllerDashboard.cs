@@ -26,10 +26,10 @@ namespace BookStoreManagement.Controller
             modelDashboard.orderCount();
             viewDashboard.lblTotalOrder.Text = modelDashboard.orderTemp;
         }
-        public void reqProduct()
+        public void reqBook()
         {
-            modelDashboard.productCount();
-            viewDashboard.lblTotalProduct.Text = modelDashboard.productTemp;
+            modelDashboard.bookCount();
+            viewDashboard.lblTotalBook.Text = modelDashboard.bookTemp;
         }
         public void reqCustomer()
         {

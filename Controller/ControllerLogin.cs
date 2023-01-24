@@ -25,10 +25,11 @@ namespace BookStoreManagement.Controller
             bool hasilReqLogin = modelLogin.userLogin();
             if (hasilReqLogin)
             {
-                    pesanLogin = "";
-                    View.ViewHome homeLanding = new View.ViewHome();
-                    homeLanding.Show();
-                    this.viewLogin.Hide();
+                pesanLogin = "";
+                View.ViewHome homeLanding = new View.ViewHome();
+                homeLanding.btnEmployee.Visible = false;
+                homeLanding.Show();
+                this.viewLogin.Hide();
             }
             else
             {

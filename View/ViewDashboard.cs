@@ -23,7 +23,7 @@ namespace BookStoreManagement.View
         {
             controllerDashboard.reqIncome();
             controllerDashboard.reqOrder();
-            controllerDashboard.reqProduct();
+            controllerDashboard.reqBook();
             controllerDashboard.reqCustomer();
             controllerDashboard.reqEmployee();
         }
@@ -31,7 +31,7 @@ namespace BookStoreManagement.View
         {
             controllerDashboard.reqIncome();
             controllerDashboard.reqOrder();
-            controllerDashboard.reqProduct();
+            controllerDashboard.reqBook();
             controllerDashboard.reqCustomer();
             controllerDashboard.reqEmployee();
         }

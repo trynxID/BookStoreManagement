@@ -19,7 +19,7 @@ namespace BookStoreManagement.Model
             con.openCon();
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `db_user` WHERE `username` =@usn AND `upassword` =@pass", con.konek());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `db_employee` WHERE `empuname` =@usn AND `emppassword` =@pass", con.konek());
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = username;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password;
             adapter.SelectCommand = command;
