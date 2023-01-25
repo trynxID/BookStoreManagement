@@ -146,7 +146,7 @@ namespace BookStoreManagement.Model
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Customer has been deleted", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information); MessageBox.Show("Customer telah dihapus", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Customer has been deleted", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information); 
                     db.closeCon();
                 }
             }
