@@ -33,7 +33,7 @@ namespace BookStoreManagement.Controller
             }
             else
             {
-                pesanLogin = "Username / Password Salah";
+                pesanLogin = "Username/Password Invalid";
                 viewLogin.txtUsername.Text = "";
                 viewLogin.txtPassword.Text = "";
                 viewLogin.txtUsername.Focus();
@@ -53,7 +53,7 @@ namespace BookStoreManagement.Controller
             }
             else
             {
-                pesanLogin = "Username / Password Salah";
+                pesanLogin = "Username/Password Invalid";
                 viewLogin.txtUsername.Text = "";
                 viewLogin.txtPassword.Text = "";
                 viewLogin.txtUsername.Focus();

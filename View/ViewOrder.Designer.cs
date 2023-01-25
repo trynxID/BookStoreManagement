@@ -30,20 +30,11 @@ namespace BookStoreManagement.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewOrder));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.txtNameCustomer = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.searchNameCustomer = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.searchNoInvoice = new System.Windows.Forms.PictureBox();
-            this.txtNoInvoice = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataOrder = new System.Windows.Forms.DataGridView();
@@ -56,10 +47,7 @@ namespace BookStoreManagement.View
             this.grandtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchNameCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchNoInvoice)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataOrder)).BeginInit();
             this.panel4.SuspendLayout();
@@ -69,95 +57,6 @@ namespace BookStoreManagement.View
             // 
             this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // txtNameCustomer
-            // 
-            this.txtNameCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNameCustomer.BackColor = System.Drawing.Color.White;
-            this.txtNameCustomer.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNameCustomer.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameCustomer.ForeColor = System.Drawing.Color.Black;
-            this.txtNameCustomer.Location = new System.Drawing.Point(25, 43);
-            this.txtNameCustomer.Multiline = true;
-            this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.Size = new System.Drawing.Size(304, 45);
-            this.txtNameCustomer.TabIndex = 48;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.searchNameCustomer);
-            this.panel2.Controls.Add(this.txtNameCustomer);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(429, 37);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(396, 100);
-            this.panel2.TabIndex = 18;
-            // 
-            // searchNameCustomer
-            // 
-            this.searchNameCustomer.Image = ((System.Drawing.Image)(resources.GetObject("searchNameCustomer.Image")));
-            this.searchNameCustomer.Location = new System.Drawing.Point(346, 42);
-            this.searchNameCustomer.Name = "searchNameCustomer";
-            this.searchNameCustomer.Size = new System.Drawing.Size(45, 45);
-            this.searchNameCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchNameCustomer.TabIndex = 138;
-            this.searchNameCustomer.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Tomato;
-            this.label1.Location = new System.Drawing.Point(4, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 23);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Customer Name :";
-            // 
-            // searchNoInvoice
-            // 
-            this.searchNoInvoice.Image = ((System.Drawing.Image)(resources.GetObject("searchNoInvoice.Image")));
-            this.searchNoInvoice.Location = new System.Drawing.Point(336, 42);
-            this.searchNoInvoice.Name = "searchNoInvoice";
-            this.searchNoInvoice.Size = new System.Drawing.Size(45, 45);
-            this.searchNoInvoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchNoInvoice.TabIndex = 138;
-            this.searchNoInvoice.TabStop = false;
-            // 
-            // txtNoInvoice
-            // 
-            this.txtNoInvoice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNoInvoice.BackColor = System.Drawing.Color.White;
-            this.txtNoInvoice.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoInvoice.ForeColor = System.Drawing.Color.Black;
-            this.txtNoInvoice.Location = new System.Drawing.Point(18, 43);
-            this.txtNoInvoice.Multiline = true;
-            this.txtNoInvoice.Name = "txtNoInvoice";
-            this.txtNoInvoice.Size = new System.Drawing.Size(304, 45);
-            this.txtNoInvoice.TabIndex = 47;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Tomato;
-            this.label2.Location = new System.Drawing.Point(4, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 23);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Invoice No. :";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.searchNoInvoice);
-            this.panel1.Controls.Add(this.txtNoInvoice);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(33, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(396, 100);
-            this.panel1.TabIndex = 17;
             // 
             // bunifuElipse2
             // 
@@ -186,7 +85,7 @@ namespace BookStoreManagement.View
             this.dataOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataOrder.BackgroundColor = System.Drawing.Color.White;
             this.dataOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Tomato;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
@@ -308,7 +207,7 @@ namespace BookStoreManagement.View
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(14, 10);
+            this.btnRefresh.Location = new System.Drawing.Point(14, 21);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(200, 50);
             this.btnRefresh.TabIndex = 139;
@@ -324,46 +223,43 @@ namespace BookStoreManagement.View
             this.panel4.Size = new System.Drawing.Size(228, 71);
             this.panel4.TabIndex = 16;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Tomato;
+            this.label3.Location = new System.Drawing.Point(357, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(322, 40);
+            this.label3.TabIndex = 139;
+            this.label3.Text = "Transaction History";
+            // 
             // ViewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Name = "ViewOrder";
             this.Size = new System.Drawing.Size(1085, 693);
             this.Load += new System.EventHandler(this.ViewOrder_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchNameCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchNoInvoice)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataOrder)).EndInit();
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox searchNameCustomer;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox searchNoInvoice;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.DataGridView dataOrder;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnRefresh;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        public System.Windows.Forms.TextBox txtNameCustomer;
-        public System.Windows.Forms.TextBox txtNoInvoice;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoicedate;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceid;
         private System.Windows.Forms.DataGridViewTextBoxColumn cusid;
@@ -371,5 +267,6 @@ namespace BookStoreManagement.View
         private System.Windows.Forms.DataGridViewTextBoxColumn cuscontact;
         private System.Windows.Forms.DataGridViewTextBoxColumn cusaddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn grandtotal;
+        private System.Windows.Forms.Label label3;
     }
 }

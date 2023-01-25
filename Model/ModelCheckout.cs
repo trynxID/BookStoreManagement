@@ -239,7 +239,7 @@ namespace BookStoreManagement.Model
                     MySqlDataReader dr = cmd2.ExecuteReader();
                     if (dr.Read())
                     {
-                        MessageBox.Show("Product Created", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Order has been add to cart", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     db.closeCon();
                     
@@ -282,6 +282,7 @@ namespace BookStoreManagement.Model
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Order has been deleted from cart", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     db.closeCon();
                 }
             }
@@ -395,7 +396,7 @@ namespace BookStoreManagement.Model
                 else
                 {
                     db.openCon();
-                    String str = "Delete From db_orders Where invoiceid = '" + noInvoiceTemp + "' and cusid = '" + nameCustomerTemp + "' ";
+                    String str = "Delete From db_orders Where invoiceid = '" + noInvoiceTemp + "' ";
                     MySqlCommand cmd = db.konek().CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;

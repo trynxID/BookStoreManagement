@@ -42,16 +42,16 @@ namespace BookStoreManagement.Controller
         }
         public void reqClearAll()
         {
-            viewCheckout.txtNoInvoice.Clear();
-            viewCheckout.txtNameCustomer.ResetText();
-            viewCheckout.txtContactCustomer.Clear();
-            viewCheckout.txtAddressCustomer.Clear();
-            viewCheckout.txtTitleBook.ResetText();
-            viewCheckout.txtPriceBook.Clear();
-            viewCheckout.txtQuantityBook.Clear();
+            viewCheckout.dataCart.DataSource = null;
             viewCheckout.txtGrandTotal.Clear();
             viewCheckout.txtPriceTotal.Clear();
-            viewCheckout.dataCart.DataSource = null;
+            viewCheckout.txtQuantityBook.Clear();
+            viewCheckout.txtPriceBook.Clear();
+            viewCheckout.txtTitleBook.ResetText();
+            viewCheckout.txtAddressCustomer.Clear();
+            viewCheckout.txtContactCustomer.Clear();
+            viewCheckout.txtNameCustomer.ResetText();
+            viewCheckout.txtNoInvoice.Clear();
         }
         public void reqGrandTotal()
         {
@@ -143,6 +143,7 @@ namespace BookStoreManagement.Controller
             modelCheckout.noInvoiceTemp = viewCheckout.txtNoInvoice.Text;
             modelCheckout.nameCustomerTemp = viewCheckout.txtNameCustomer.Text;
             modelCheckout.removeDataCheckout();
+            this.reqDeleteData();
             this.reqClearAll();
             this.reqId();
         }
@@ -157,6 +158,7 @@ namespace BookStoreManagement.Controller
             viewCheckout.txtAddressCustomer.Text = modelCheckout.addressCustomerTemp;
             viewCheckout.txtGrandTotal.Text = modelCheckout.totalGrandTemp;
             this.reqData();
+            this.reqCellBook();
         }
         public void reqCellBook()
         {

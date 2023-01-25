@@ -69,7 +69,7 @@ namespace BookStoreManagement.View
             this.txtContactCustomer = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.txtNameCustomer = new System.Windows.Forms.ComboBox();
             this.txtTitleBook = new System.Windows.Forms.ComboBox();
             this.txtIdBook = new System.Windows.Forms.Label();
@@ -528,38 +528,38 @@ namespace BookStoreManagement.View
             this.label8.TabIndex = 166;
             this.label8.Text = "Customer Name :";
             // 
-            // btnPrint
+            // btnClear
             // 
-            this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrint.BackColor = System.Drawing.Color.Tomato;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(775, 607);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(200, 50);
-            this.btnPrint.TabIndex = 192;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.BackColor = System.Drawing.Color.Tomato;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(775, 607);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(200, 50);
+            this.btnClear.TabIndex = 192;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtNameCustomer
             // 
-            this.txtNameCustomer.Font = new System.Drawing.Font("Palatino Linotype", 20F);
+            this.txtNameCustomer.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameCustomer.FormattingEnabled = true;
             this.txtNameCustomer.Location = new System.Drawing.Point(53, 286);
             this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.Size = new System.Drawing.Size(303, 44);
+            this.txtNameCustomer.Size = new System.Drawing.Size(303, 45);
             this.txtNameCustomer.TabIndex = 193;
             this.txtNameCustomer.TextChanged += new System.EventHandler(this.txtNameCustomer_TextChanged);
             // 
             // txtTitleBook
             // 
-            this.txtTitleBook.Font = new System.Drawing.Font("Palatino Linotype", 20F);
+            this.txtTitleBook.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitleBook.FormattingEnabled = true;
             this.txtTitleBook.Location = new System.Drawing.Point(53, 397);
             this.txtTitleBook.Name = "txtTitleBook";
-            this.txtTitleBook.Size = new System.Drawing.Size(303, 44);
+            this.txtTitleBook.Size = new System.Drawing.Size(303, 45);
             this.txtTitleBook.TabIndex = 194;
             this.txtTitleBook.TextChanged += new System.EventHandler(this.txtTitleBook_TextChanged);
             // 
@@ -607,7 +607,7 @@ namespace BookStoreManagement.View
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.txtTitleBook);
             this.Controls.Add(this.txtNameCustomer);
-            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtGrandTotal);
             this.Controls.Add(this.btnRemove);
@@ -667,7 +667,7 @@ namespace BookStoreManagement.View
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnClear;
         public System.Windows.Forms.TextBox txtGrandTotal;
         public System.Windows.Forms.TextBox txtPriceTotal;
         public System.Windows.Forms.TextBox txtQuantityBook;

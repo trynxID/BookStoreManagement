@@ -21,6 +21,7 @@ namespace BookStoreManagement.View
         }
         private void ViewCategory_Load(object sender, EventArgs e)
         {
+            controllerCategory.reqClear();
             controllerCategory.reqId();
             controllerCategory.reqData();
         }

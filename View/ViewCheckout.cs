@@ -52,11 +52,6 @@ namespace BookStoreManagement.View
             controllerCheckout.reqRemoveData();
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void searchNoInvoice_Click(object sender, EventArgs e)
         {
             controllerCheckout.reqSearchData();
@@ -83,5 +78,10 @@ namespace BookStoreManagement.View
             controllerCheckout.reqCellBook();
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            controllerCheckout.reqClearAll();
+            controllerCheckout.reqId();
+        }
     }
 }

@@ -62,7 +62,7 @@ namespace BookStoreManagement.Model
             {
                 if (idPublisherTemp == "" || namePublisherTemp == "")
                 {
-                    MessageBox.Show("Silahkan isi data terlebih dahulu ", "Coba Lagi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Insert All Information ", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
                 else
@@ -81,7 +81,7 @@ namespace BookStoreManagement.Model
                     MySqlDataReader dr = cmd2.ExecuteReader();
                     if (dr.Read())
                     {
-                        MessageBox.Show("Kategori berhasil dibuat", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Publisher has been entered", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         db.closeCon();
                     }
                 }
@@ -97,7 +97,7 @@ namespace BookStoreManagement.Model
             {
                 if (idPublisherTemp == "" || namePublisherTemp == "")
                 {
-                    MessageBox.Show("Silahkan isi data terlebih dahulu ", "Coba Lagi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Insert All Information ", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
                 else
@@ -116,7 +116,7 @@ namespace BookStoreManagement.Model
                     MySqlDataReader dr = cmd2.ExecuteReader();
                     if (dr.Read())
                     {
-                        MessageBox.Show("Kategori telah diperbaharui", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Publisher has been updated", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         db.closeCon();
                     }
                 }
@@ -132,7 +132,7 @@ namespace BookStoreManagement.Model
             {
                 if (idPublisherTemp == "" || namePublisherTemp == "")
                 {
-                    MessageBox.Show("Silahkan isi data terlebih dahulu ", "Coba Lagi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Insert All Information ", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
                 else
@@ -143,7 +143,7 @@ namespace BookStoreManagement.Model
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Kategori telah dihapus", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Publisher has been deleted", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information); MessageBox.Show("Customer telah dihapus", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     db.closeCon();
                 }
             }
