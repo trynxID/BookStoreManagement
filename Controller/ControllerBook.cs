@@ -24,10 +24,13 @@ namespace BookStoreManagement.Controller
         public void reqData()
         {
             modelBook.updateDataBook();
-            modelBook.loadDataCategory();
-            modelBook.loadDataPublisher();
             viewBook.dataBook.AutoGenerateColumns = false;
             viewBook.dataBook.DataSource = modelBook.dataTempBook;
+        }
+        public void reqFill()
+        {
+            modelBook.loadDataCategory();
+            modelBook.loadDataPublisher();
             viewBook.txtCategoryBook.Items.AddRange(modelBook.objCat);
             viewBook.txtPublisherBook.Items.AddRange(modelBook.objPub);
         }

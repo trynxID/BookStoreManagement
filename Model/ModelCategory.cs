@@ -143,7 +143,7 @@ namespace BookStoreManagement.Model
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Category has been deleted", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information); MessageBox.Show("Kategori telah dihapus", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Category has been deleted", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     db.closeCon();
                 }
             }

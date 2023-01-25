@@ -23,6 +23,7 @@ namespace BookStoreManagement.View
         private void ViewProduct_Load(object sender, EventArgs e)
         {
             controllerBook.reqId();
+            controllerBook.reqFill();
             controllerBook.reqData();
         }
 
