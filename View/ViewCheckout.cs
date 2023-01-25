@@ -13,6 +13,8 @@ namespace BookStoreManagement.View
     public partial class ViewCheckout : UserControl
     {
         Controller.ControllerCheckout controllerCheckout;
+
+        public int tempIndex;
         public ViewCheckout()
         {
             InitializeComponent();
@@ -57,7 +59,7 @@ namespace BookStoreManagement.View
 
         private void searchNoInvoice_Click(object sender, EventArgs e)
         {
-
+            controllerCheckout.reqSearchData();
         }
 
         private void txtNameCustomer_TextChanged(object sender, EventArgs e)
@@ -74,5 +76,12 @@ namespace BookStoreManagement.View
         {
             controllerCheckout.reqContentQuantity();
         }
+
+        private void dataCart_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tempIndex = e.RowIndex;
+            controllerCheckout.reqCellBook();
+        }
+
     }
 }

@@ -63,5 +63,10 @@ namespace BookStoreManagement.View
             tempIndex = e.RowIndex;
             controllerCustomer.reqCellCustomer();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            controllerCustomer.reqClear();
+        }
     }
 }

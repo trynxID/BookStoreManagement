@@ -417,5 +417,55 @@ namespace BookStoreManagement.Model
                 MessageBox.Show(ex.Message);
             }
         }
+        public void searchDataCheckout()
+        {
+            try
+            {
+                if (noInvoiceTemp == "")
+                {
+                    MessageBox.Show("Please , Enter Invoice No.", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    View.ViewCheckout viewCheckout = new View.ViewCheckout();
+                    viewCheckout.txtNoInvoice.Focus();
+
+                }
+                else
+                {
+                    db.openCon();
+                    String str = "Select invoicedate,cusid,cusname,cuscontact,cusaddress,grandtotal From db_orders Where invoiceid = '" + noInvoiceTemp + "'";
+                    MySqlCommand cmd = db.konek().CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = str;
+                    MySqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        dateInvoiceTemp = dr.GetValue(0).ToString();
+                        idCustomerTemp = dr.GetValue(1).ToString();
+                        nameCustomerTemp = dr.GetValue(2).ToString();
+                        contactCustomerTemp = dr.GetValue(3).ToString();
+                        addressCustomerTemp = dr.GetValue(4).ToString();
+                        totalGrandTemp = dr.GetValue(5).ToString();
+                    }
+                    db.closeCon();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void cellDataCheckout()
+        {
+            try
+            {
+                DataGridViewRow dataTemp = tempDataCheckout.Rows[indexCheckout];
+                titleBookTemp = dataTemp.Cells[3].Value.ToString();
+                priceBookTemp = dataTemp.Cells[4].Value.ToString();
+                quantityBookTemp = dataTemp.Cells[5].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

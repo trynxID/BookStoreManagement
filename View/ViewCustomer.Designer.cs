@@ -56,6 +56,7 @@ namespace BookStoreManagement.View
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdCustomer = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerIdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerNameSearch)).BeginInit();
@@ -160,7 +161,7 @@ namespace BookStoreManagement.View
             this.dataCustomer.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dataCustomer.RowTemplate.Height = 35;
             this.dataCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataCustomer.Size = new System.Drawing.Size(990, 433);
+            this.dataCustomer.Size = new System.Drawing.Size(990, 390);
             this.dataCustomer.TabIndex = 2;
             this.dataCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCustomer_CellClick);
             // 
@@ -171,7 +172,7 @@ namespace BookStoreManagement.View
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(878, 157);
+            this.btnRemove.Location = new System.Drawing.Point(883, 205);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(154, 50);
             this.btnRemove.TabIndex = 149;
@@ -208,7 +209,7 @@ namespace BookStoreManagement.View
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(878, 101);
+            this.btnEdit.Location = new System.Drawing.Point(883, 149);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(154, 50);
             this.btnEdit.TabIndex = 146;
@@ -223,7 +224,7 @@ namespace BookStoreManagement.View
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(878, 45);
+            this.btnSave.Location = new System.Drawing.Point(883, 93);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(154, 50);
             this.btnSave.TabIndex = 145;
@@ -333,15 +334,31 @@ namespace BookStoreManagement.View
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.dataCustomer);
-            this.panel1.Location = new System.Drawing.Point(47, 224);
+            this.panel1.Location = new System.Drawing.Point(47, 267);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(990, 433);
+            this.panel1.Size = new System.Drawing.Size(990, 390);
             this.panel1.TabIndex = 136;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.BackColor = System.Drawing.Color.Tomato;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(883, 37);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(154, 50);
+            this.btnClear.TabIndex = 150;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // ViewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.customerIdSearch);
             this.Controls.Add(this.customerNameSearch);
@@ -390,5 +407,6 @@ namespace BookStoreManagement.View
         public System.Windows.Forms.TextBox txtAddressCustomer;
         public System.Windows.Forms.TextBox txtNameCustomer;
         public System.Windows.Forms.TextBox txtIdCustomer;
+        private System.Windows.Forms.Button btnClear;
     }
 }

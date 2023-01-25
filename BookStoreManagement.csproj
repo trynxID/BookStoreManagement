@@ -104,6 +104,7 @@
     <Compile Include="Controller\ControllerDashboard.cs" />
     <Compile Include="Controller\ControllerEmployee.cs" />
     <Compile Include="Controller\ControllerLogin.cs" />
+    <Compile Include="Controller\ControllerOrder.cs" />
     <Compile Include="Controller\ControllerPublisher.cs" />
     <Compile Include="Model\ModelBook.cs" />
     <Compile Include="Model\ModelCategory.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Model\ModelDashboard.cs" />
     <Compile Include="Model\ModelEmployee.cs" />
     <Compile Include="Model\ModelLogin.cs" />
+    <Compile Include="Model\ModelOrder.cs" />
     <Compile Include="Model\ModelPublisher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

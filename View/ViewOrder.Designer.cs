@@ -45,15 +45,15 @@ namespace BookStoreManagement.View
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.grandtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cusname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cusid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.invono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.invodate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataOrder = new System.Windows.Forms.DataGridView();
+            this.invoicedate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cusid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cusname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuscontact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cusaddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grandtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
@@ -164,69 +164,6 @@ namespace BookStoreManagement.View
             this.bunifuElipse2.ElipseRadius = 20;
             this.bunifuElipse2.TargetControl = this;
             // 
-            // grandtotal
-            // 
-            this.grandtotal.DataPropertyName = "grandtotal";
-            this.grandtotal.HeaderText = "Grand Total";
-            this.grandtotal.MinimumWidth = 6;
-            this.grandtotal.Name = "grandtotal";
-            this.grandtotal.ReadOnly = true;
-            this.grandtotal.Width = 150;
-            // 
-            // address
-            // 
-            this.address.DataPropertyName = "address";
-            this.address.HeaderText = "Address";
-            this.address.MinimumWidth = 6;
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            this.address.Width = 350;
-            // 
-            // contact
-            // 
-            this.contact.DataPropertyName = "contact";
-            this.contact.HeaderText = "Contact";
-            this.contact.MinimumWidth = 6;
-            this.contact.Name = "contact";
-            this.contact.ReadOnly = true;
-            this.contact.Width = 125;
-            // 
-            // cusname
-            // 
-            this.cusname.DataPropertyName = "cusname";
-            this.cusname.HeaderText = "Customer Name";
-            this.cusname.MinimumWidth = 6;
-            this.cusname.Name = "cusname";
-            this.cusname.ReadOnly = true;
-            this.cusname.Width = 350;
-            // 
-            // cusid
-            // 
-            this.cusid.DataPropertyName = "cusid";
-            this.cusid.HeaderText = "Customer Id";
-            this.cusid.MinimumWidth = 6;
-            this.cusid.Name = "cusid";
-            this.cusid.ReadOnly = true;
-            this.cusid.Width = 150;
-            // 
-            // invono
-            // 
-            this.invono.DataPropertyName = "invono";
-            this.invono.HeaderText = "Invoice No";
-            this.invono.MinimumWidth = 6;
-            this.invono.Name = "invono";
-            this.invono.ReadOnly = true;
-            this.invono.Width = 150;
-            // 
-            // invodate
-            // 
-            this.invodate.DataPropertyName = "invodate";
-            this.invodate.HeaderText = "Invoice Date";
-            this.invodate.MinimumWidth = 6;
-            this.invodate.Name = "invodate";
-            this.invodate.ReadOnly = true;
-            this.invodate.Width = 200;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gray;
@@ -259,12 +196,12 @@ namespace BookStoreManagement.View
             this.dataOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataOrder.ColumnHeadersHeight = 40;
             this.dataOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.invodate,
-            this.invono,
+            this.invoicedate,
+            this.invoiceid,
             this.cusid,
             this.cusname,
-            this.contact,
-            this.address,
+            this.cuscontact,
+            this.cusaddress,
             this.grandtotal});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -276,7 +213,7 @@ namespace BookStoreManagement.View
             this.dataOrder.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataOrder.EnableHeadersVisualStyles = false;
-            this.dataOrder.GridColor = System.Drawing.Color.White;
+            this.dataOrder.GridColor = System.Drawing.Color.Tomato;
             this.dataOrder.Location = new System.Drawing.Point(0, 0);
             this.dataOrder.Name = "dataOrder";
             this.dataOrder.ReadOnly = true;
@@ -301,6 +238,69 @@ namespace BookStoreManagement.View
             this.dataOrder.Size = new System.Drawing.Size(1009, 518);
             this.dataOrder.TabIndex = 2;
             // 
+            // invoicedate
+            // 
+            this.invoicedate.DataPropertyName = "invoicedate";
+            this.invoicedate.HeaderText = "Invoice Date";
+            this.invoicedate.MinimumWidth = 6;
+            this.invoicedate.Name = "invoicedate";
+            this.invoicedate.ReadOnly = true;
+            this.invoicedate.Width = 200;
+            // 
+            // invoiceid
+            // 
+            this.invoiceid.DataPropertyName = "invoiceid";
+            this.invoiceid.HeaderText = "Invoice No";
+            this.invoiceid.MinimumWidth = 6;
+            this.invoiceid.Name = "invoiceid";
+            this.invoiceid.ReadOnly = true;
+            this.invoiceid.Width = 150;
+            // 
+            // cusid
+            // 
+            this.cusid.DataPropertyName = "cusid";
+            this.cusid.HeaderText = "Customer Id";
+            this.cusid.MinimumWidth = 6;
+            this.cusid.Name = "cusid";
+            this.cusid.ReadOnly = true;
+            this.cusid.Width = 150;
+            // 
+            // cusname
+            // 
+            this.cusname.DataPropertyName = "cusname";
+            this.cusname.HeaderText = "Name";
+            this.cusname.MinimumWidth = 6;
+            this.cusname.Name = "cusname";
+            this.cusname.ReadOnly = true;
+            this.cusname.Width = 350;
+            // 
+            // cuscontact
+            // 
+            this.cuscontact.DataPropertyName = "cuscontact";
+            this.cuscontact.HeaderText = "Contact";
+            this.cuscontact.MinimumWidth = 6;
+            this.cuscontact.Name = "cuscontact";
+            this.cuscontact.ReadOnly = true;
+            this.cuscontact.Width = 125;
+            // 
+            // cusaddress
+            // 
+            this.cusaddress.DataPropertyName = "cusaddress";
+            this.cusaddress.HeaderText = "Address";
+            this.cusaddress.MinimumWidth = 6;
+            this.cusaddress.Name = "cusaddress";
+            this.cusaddress.ReadOnly = true;
+            this.cusaddress.Width = 350;
+            // 
+            // grandtotal
+            // 
+            this.grandtotal.DataPropertyName = "grandtotal";
+            this.grandtotal.HeaderText = "Grand Total";
+            this.grandtotal.MinimumWidth = 6;
+            this.grandtotal.Name = "grandtotal";
+            this.grandtotal.ReadOnly = true;
+            this.grandtotal.Width = 150;
+            // 
             // btnRefresh
             // 
             this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -314,6 +314,7 @@ namespace BookStoreManagement.View
             this.btnRefresh.TabIndex = 139;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // panel4
             // 
@@ -333,6 +334,7 @@ namespace BookStoreManagement.View
             this.Controls.Add(this.panel4);
             this.Name = "ViewOrder";
             this.Size = new System.Drawing.Size(1085, 693);
+            this.Load += new System.EventHandler(this.ViewOrder_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchNameCustomer)).EndInit();
@@ -357,17 +359,17 @@ namespace BookStoreManagement.View
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.DataGridView dataOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn invodate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn invono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cusid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cusname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contact;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grandtotal;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnRefresh;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         public System.Windows.Forms.TextBox txtNameCustomer;
         public System.Windows.Forms.TextBox txtNoInvoice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoicedate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cusid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cusname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuscontact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cusaddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grandtotal;
     }
 }

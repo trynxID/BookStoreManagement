@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2023 at 02:21 PM
+-- Generation Time: Jan 25, 2023 at 04:14 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.16
 
@@ -97,7 +97,8 @@ INSERT INTO `db_checkout` (`invoiceid`, `cusid`, `bookid`, `name`, `quantity`, `
 ('INV0003', 'CUS0001', 'BOK0001', 'LASKAR PELANGI', '5', '65000', '325000'),
 ('INV0004', 'CUS0001', 'BOK0001', 'LASKAR PELANGI', '5', '65000', '325000'),
 ('INV0005', 'CUS0001', 'BOK0001', 'LASKAR PELANGI', '1', '65000', '65000'),
-('INV0006', 'CUS0001', 'BOK0001', 'LASKAR PELANGI', '5', '65000', '325000');
+('INV0006', 'CUS0001', 'BOK0001', 'LASKAR PELANGI', '5', '65000', '325000'),
+('INV0007', 'CUS0001', 'BOK0001', 'LASKAR PELANGI', '2', '65000', '130000');
 
 -- --------------------------------------------------------
 
@@ -117,7 +118,8 @@ CREATE TABLE `db_customers` (
 --
 
 INSERT INTO `db_customers` (`cusid`, `cusname`, `cuscontact`, `cusaddress`) VALUES
-('CUS0001', 'GILANG', '087854215642', 'BABARSARI');
+('CUS0001', 'GILANG', '087854215642', 'BABARSARI'),
+('CUS0002', 'ALDO', '085674217885', 'BANTUL');
 
 -- --------------------------------------------------------
 
@@ -162,11 +164,11 @@ CREATE TABLE `db_orders` (
 --
 
 INSERT INTO `db_orders` (`invoicedate`, `invoiceid`, `cusid`, `cusname`, `cuscontact`, `cusaddress`, `grandtotal`) VALUES
-('12/01/2023', '42774', '75441', 'ADAM', '082138876452', 'KLATEN', '90000'),
 ('24/01/2023', 'INV0003', 'CUS0001', 'GILANG', '087854215642', 'BABARSARI', '650000'),
 ('24/01/2023', 'INV0004', 'CUS0001', 'GILANG', '087854215642', 'BABARSARI', '325000'),
 ('24/01/2023', 'INV0005', 'CUS0001', 'GILANG', '087854215642', 'BABARSARI', '65000'),
-('24/01/2023', 'INV0006', 'CUS0001', 'GILANG', '087854215642', 'BABARSARI', '325000');
+('24/01/2023', 'INV0006', 'CUS0001', 'GILANG', '087854215642', 'BABARSARI', '325000'),
+('25/01/2023', 'INV0007', 'CUS0001', 'GILANG', '087854215642', 'BABARSARI', '130000');
 
 -- --------------------------------------------------------
 

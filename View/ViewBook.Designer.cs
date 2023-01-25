@@ -37,6 +37,14 @@ namespace BookStoreManagement.View
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewBook));
             this.dataBook = new System.Windows.Forms.DataGridView();
+            this.bookId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookWriter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookPublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCategoryBook = new System.Windows.Forms.ComboBox();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -60,14 +68,7 @@ namespace BookStoreManagement.View
             this.label8 = new System.Windows.Forms.Label();
             this.txtPublisherBook = new System.Windows.Forms.ComboBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bookId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookWriter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookPublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookIdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookTitleSearch)).BeginInit();
@@ -115,7 +116,7 @@ namespace BookStoreManagement.View
             this.dataBook.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataBook.EnableHeadersVisualStyles = false;
-            this.dataBook.GridColor = System.Drawing.Color.White;
+            this.dataBook.GridColor = System.Drawing.Color.Tomato;
             this.dataBook.Location = new System.Drawing.Point(0, 0);
             this.dataBook.Name = "dataBook";
             this.dataBook.ReadOnly = true;
@@ -143,6 +144,74 @@ namespace BookStoreManagement.View
             this.dataBook.TabIndex = 2;
             this.dataBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataBook_CellClick);
             // 
+            // bookId
+            // 
+            this.bookId.DataPropertyName = "bookId";
+            this.bookId.HeaderText = "Book Id";
+            this.bookId.MinimumWidth = 6;
+            this.bookId.Name = "bookId";
+            this.bookId.ReadOnly = true;
+            this.bookId.Width = 80;
+            // 
+            // bookTitle
+            // 
+            this.bookTitle.DataPropertyName = "name";
+            this.bookTitle.HeaderText = "Book Title";
+            this.bookTitle.MinimumWidth = 6;
+            this.bookTitle.Name = "bookTitle";
+            this.bookTitle.ReadOnly = true;
+            this.bookTitle.Width = 300;
+            // 
+            // bookprice
+            // 
+            this.bookprice.DataPropertyName = "price";
+            this.bookprice.HeaderText = "Price";
+            this.bookprice.MinimumWidth = 6;
+            this.bookprice.Name = "bookprice";
+            this.bookprice.ReadOnly = true;
+            this.bookprice.Width = 70;
+            // 
+            // bookWriter
+            // 
+            this.bookWriter.DataPropertyName = "writer";
+            this.bookWriter.HeaderText = "Writer";
+            this.bookWriter.MinimumWidth = 6;
+            this.bookWriter.Name = "bookWriter";
+            this.bookWriter.ReadOnly = true;
+            this.bookWriter.Width = 200;
+            // 
+            // bookQuantity
+            // 
+            this.bookQuantity.DataPropertyName = "quantity";
+            this.bookQuantity.HeaderText = "Quantity";
+            this.bookQuantity.MinimumWidth = 6;
+            this.bookQuantity.Name = "bookQuantity";
+            this.bookQuantity.ReadOnly = true;
+            // 
+            // bookCategory
+            // 
+            this.bookCategory.DataPropertyName = "category";
+            this.bookCategory.HeaderText = "Category";
+            this.bookCategory.MinimumWidth = 6;
+            this.bookCategory.Name = "bookCategory";
+            this.bookCategory.ReadOnly = true;
+            this.bookCategory.Width = 200;
+            // 
+            // bookYear
+            // 
+            this.bookYear.DataPropertyName = "publication_year";
+            this.bookYear.HeaderText = "Pub. Year";
+            this.bookYear.Name = "bookYear";
+            this.bookYear.ReadOnly = true;
+            // 
+            // bookPublisher
+            // 
+            this.bookPublisher.DataPropertyName = "publisher";
+            this.bookPublisher.HeaderText = "Publisher";
+            this.bookPublisher.Name = "bookPublisher";
+            this.bookPublisher.ReadOnly = true;
+            this.bookPublisher.Width = 150;
+            // 
             // txtCategoryBook
             // 
             this.txtCategoryBook.Font = new System.Drawing.Font("Palatino Linotype", 20F, System.Drawing.FontStyle.Bold);
@@ -160,7 +229,7 @@ namespace BookStoreManagement.View
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(866, 339);
+            this.btnRemove.Location = new System.Drawing.Point(866, 318);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(167, 50);
             this.btnRemove.TabIndex = 177;
@@ -175,7 +244,7 @@ namespace BookStoreManagement.View
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(866, 246);
+            this.btnEdit.Location = new System.Drawing.Point(866, 262);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(167, 50);
             this.btnEdit.TabIndex = 176;
@@ -190,7 +259,7 @@ namespace BookStoreManagement.View
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(866, 150);
+            this.btnSave.Location = new System.Drawing.Point(866, 206);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(167, 50);
             this.btnSave.TabIndex = 175;
@@ -414,78 +483,26 @@ namespace BookStoreManagement.View
             this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // bookId
+            // btnClear
             // 
-            this.bookId.DataPropertyName = "bookId";
-            this.bookId.HeaderText = "Book Id";
-            this.bookId.MinimumWidth = 6;
-            this.bookId.Name = "bookId";
-            this.bookId.ReadOnly = true;
-            this.bookId.Width = 80;
-            // 
-            // bookTitle
-            // 
-            this.bookTitle.DataPropertyName = "name";
-            this.bookTitle.HeaderText = "Book Title";
-            this.bookTitle.MinimumWidth = 6;
-            this.bookTitle.Name = "bookTitle";
-            this.bookTitle.ReadOnly = true;
-            this.bookTitle.Width = 300;
-            // 
-            // bookprice
-            // 
-            this.bookprice.DataPropertyName = "price";
-            this.bookprice.HeaderText = "Price";
-            this.bookprice.MinimumWidth = 6;
-            this.bookprice.Name = "bookprice";
-            this.bookprice.ReadOnly = true;
-            this.bookprice.Width = 70;
-            // 
-            // bookWriter
-            // 
-            this.bookWriter.DataPropertyName = "writer";
-            this.bookWriter.HeaderText = "Writer";
-            this.bookWriter.MinimumWidth = 6;
-            this.bookWriter.Name = "bookWriter";
-            this.bookWriter.ReadOnly = true;
-            this.bookWriter.Width = 200;
-            // 
-            // bookQuantity
-            // 
-            this.bookQuantity.DataPropertyName = "quantity";
-            this.bookQuantity.HeaderText = "Quantity";
-            this.bookQuantity.MinimumWidth = 6;
-            this.bookQuantity.Name = "bookQuantity";
-            this.bookQuantity.ReadOnly = true;
-            // 
-            // bookCategory
-            // 
-            this.bookCategory.DataPropertyName = "category";
-            this.bookCategory.HeaderText = "Category";
-            this.bookCategory.MinimumWidth = 6;
-            this.bookCategory.Name = "bookCategory";
-            this.bookCategory.ReadOnly = true;
-            this.bookCategory.Width = 200;
-            // 
-            // bookYear
-            // 
-            this.bookYear.DataPropertyName = "publication_year";
-            this.bookYear.HeaderText = "Pub. Year";
-            this.bookYear.Name = "bookYear";
-            this.bookYear.ReadOnly = true;
-            // 
-            // bookPublisher
-            // 
-            this.bookPublisher.DataPropertyName = "publisher";
-            this.bookPublisher.HeaderText = "Publisher";
-            this.bookPublisher.Name = "bookPublisher";
-            this.bookPublisher.ReadOnly = true;
-            this.bookPublisher.Width = 150;
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.BackColor = System.Drawing.Color.Tomato;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(866, 150);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(167, 50);
+            this.btnClear.TabIndex = 183;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // ViewBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtPublisherBook);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPublicationBook);
@@ -554,5 +571,6 @@ namespace BookStoreManagement.View
         private System.Windows.Forms.DataGridViewTextBoxColumn bookCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookPublisher;
+        private System.Windows.Forms.Button btnClear;
     }
 }

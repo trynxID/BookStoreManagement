@@ -50,6 +50,7 @@ namespace BookStoreManagement.View
             this.searchPubId = new System.Windows.Forms.PictureBox();
             this.searchPubName = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnClear = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPublisher)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPubId)).BeginInit();
@@ -63,7 +64,7 @@ namespace BookStoreManagement.View
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(683, 147);
+            this.btnRemove.Location = new System.Drawing.Point(743, 145);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(154, 50);
             this.btnRemove.TabIndex = 137;
@@ -78,7 +79,7 @@ namespace BookStoreManagement.View
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(502, 147);
+            this.btnEdit.Location = new System.Drawing.Point(562, 145);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(154, 50);
             this.btnEdit.TabIndex = 136;
@@ -130,7 +131,7 @@ namespace BookStoreManagement.View
             this.dataPublisher.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataPublisher.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataPublisher.EnableHeadersVisualStyles = false;
-            this.dataPublisher.GridColor = System.Drawing.Color.White;
+            this.dataPublisher.GridColor = System.Drawing.Color.Tomato;
             this.dataPublisher.Location = new System.Drawing.Point(0, 0);
             this.dataPublisher.Name = "dataPublisher";
             this.dataPublisher.ReadOnly = true;
@@ -197,7 +198,7 @@ namespace BookStoreManagement.View
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(324, 147);
+            this.btnSave.Location = new System.Drawing.Point(384, 145);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(154, 50);
             this.btnSave.TabIndex = 135;
@@ -268,10 +269,26 @@ namespace BookStoreManagement.View
             this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.BackColor = System.Drawing.Color.Tomato;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(203, 145);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(154, 50);
+            this.btnClear.TabIndex = 139;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // ViewPublisher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.panel1);
@@ -311,5 +328,6 @@ namespace BookStoreManagement.View
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pubid;
         private System.Windows.Forms.DataGridViewTextBoxColumn pubname;
+        private System.Windows.Forms.Button btnClear;
     }
 }

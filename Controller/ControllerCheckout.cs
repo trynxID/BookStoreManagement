@@ -18,20 +18,6 @@ namespace BookStoreManagement.Controller
         }
         public void reqId()
         {
-            /*
-            modelCheckout.dateInvoiceTemp = viewCheckout.txtDateInvoice.Text;
-            modelCheckout.noInvoiceTemp = viewCheckout.txtNoInvoice.Text;
-            modelCheckout.idCustomerTemp = viewCheckout.txtIdCustomer.Text;
-            modelCheckout.nameCustomerTemp = viewCheckout.txtNameCustomer.Text;
-            modelCheckout.contactCustomerTemp = viewCheckout.txtContactCustomer.Text;
-            modelCheckout.addressCustomerTemp = viewCheckout.txtAddressCustomer.Text;
-            modelCheckout.idBookTemp = viewCheckout.txtIdBook.Text;
-            modelCheckout.titleBookTemp = viewCheckout.txtTitleBook.Text;
-            modelCheckout.priceBookTemp = viewCheckout.txtPriceBook.Text;
-            modelCheckout.quantityBookTemp = viewCheckout.txtQuantityBook.Text;
-            modelCheckout.priceTotalTemp = viewCheckout.txtPriceTotal.Text;
-            modelCheckout.totalGrandTemp = viewCheckout.txtGrandTotal.Text;
-            *///template
             modelCheckout.updateIdCheckout();
             viewCheckout.txtNoInvoice.Text = modelCheckout.noTemp;
         }
@@ -65,7 +51,7 @@ namespace BookStoreManagement.Controller
             viewCheckout.txtQuantityBook.Clear();
             viewCheckout.txtGrandTotal.Clear();
             viewCheckout.txtPriceTotal.Clear();
-            this.reqData();
+            viewCheckout.dataCart.DataSource = null;
         }
         public void reqGrandTotal()
         {
@@ -73,7 +59,7 @@ namespace BookStoreManagement.Controller
             modelCheckout.addGrandTotal();
             viewCheckout.txtGrandTotal.Text = modelCheckout.totalGrandTemp;
         }
-       public void reqAddToCart()
+        public void reqAddToCart()
         {
             modelCheckout.noInvoiceTemp = viewCheckout.txtNoInvoice.Text;
             modelCheckout.idCustomerTemp = viewCheckout.txtIdCustomer.Text;
@@ -159,6 +145,27 @@ namespace BookStoreManagement.Controller
             modelCheckout.removeDataCheckout();
             this.reqClearAll();
             this.reqId();
+        }
+        public void reqSearchData()
+        {
+            modelCheckout.noInvoiceTemp = viewCheckout.txtNoInvoice.Text;
+            modelCheckout.searchDataCheckout();
+            viewCheckout.txtDateInvoice.Text = modelCheckout.dateInvoiceTemp;
+            viewCheckout.txtIdCustomer.Text = modelCheckout.idCustomerTemp;
+            viewCheckout.txtNameCustomer.Text = modelCheckout.nameCustomerTemp;
+            viewCheckout.txtContactCustomer.Text = modelCheckout.contactCustomerTemp;
+            viewCheckout.txtAddressCustomer.Text = modelCheckout.addressCustomerTemp;
+            viewCheckout.txtGrandTotal.Text = modelCheckout.totalGrandTemp;
+            this.reqData();
+        }
+        public void reqCellBook()
+        {
+            modelCheckout.tempDataCheckout = viewCheckout.dataCart;
+            modelCheckout.indexCheckout = viewCheckout.tempIndex;
+            modelCheckout.cellDataCheckout();
+            viewCheckout.txtTitleBook.Text = modelCheckout.titleBookTemp;
+            viewCheckout.txtPriceBook.Text = modelCheckout.priceBookTemp;
+            viewCheckout.txtQuantityBook.Text = modelCheckout.quantityBookTemp;
         }
     }
 }

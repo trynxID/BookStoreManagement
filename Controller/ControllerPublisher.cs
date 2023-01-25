@@ -73,5 +73,11 @@ namespace BookStoreManagement.Controller
             viewPublisher.txtNamePublisher.Text = modelPublisher.namePublisherTemp;
 
         }
+        public void reqClear()
+        {
+            viewPublisher.txtIdPublisher.Clear();
+            viewPublisher.txtNamePublisher.Clear();
+            this.reqId();
+        }
     }
 }

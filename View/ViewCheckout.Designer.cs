@@ -31,10 +31,10 @@ namespace BookStoreManagement.View
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewCheckout));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnSave = new System.Windows.Forms.Button();
             this.txtGrandTotal = new System.Windows.Forms.TextBox();
@@ -55,6 +55,13 @@ namespace BookStoreManagement.View
             this.txtNoInvoice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataCart = new System.Windows.Forms.DataGridView();
+            this.invoiceid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cusid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -69,13 +76,6 @@ namespace BookStoreManagement.View
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtIdCustomer = new System.Windows.Forms.Label();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.invoiceid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cusid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.searchNoInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCart)).BeginInit();
             this.panel3.SuspendLayout();
@@ -322,21 +322,21 @@ namespace BookStoreManagement.View
             this.dataCart.AllowUserToDeleteRows = false;
             this.dataCart.AllowUserToResizeColumns = false;
             this.dataCart.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataCart.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataCart.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataCart.BackgroundColor = System.Drawing.Color.White;
             this.dataCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataCart.ColumnHeadersHeight = 40;
             this.dataCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.invoiceid,
@@ -346,28 +346,28 @@ namespace BookStoreManagement.View
             this.price,
             this.quantity,
             this.totalprice});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataCart.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataCart.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataCart.EnableHeadersVisualStyles = false;
-            this.dataCart.GridColor = System.Drawing.Color.White;
+            this.dataCart.GridColor = System.Drawing.Color.Tomato;
             this.dataCart.Location = new System.Drawing.Point(0, 0);
             this.dataCart.Name = "dataCart";
             this.dataCart.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCart.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataCart.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataCart.RowHeadersVisible = false;
             this.dataCart.RowHeadersWidth = 51;
             this.dataCart.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -380,6 +380,71 @@ namespace BookStoreManagement.View
             this.dataCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataCart.Size = new System.Drawing.Size(626, 201);
             this.dataCart.TabIndex = 2;
+            this.dataCart.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCart_CellClick);
+            // 
+            // invoiceid
+            // 
+            this.invoiceid.DataPropertyName = "invoiceid";
+            this.invoiceid.HeaderText = "invoceid";
+            this.invoiceid.MinimumWidth = 6;
+            this.invoiceid.Name = "invoiceid";
+            this.invoiceid.ReadOnly = true;
+            this.invoiceid.Visible = false;
+            this.invoiceid.Width = 125;
+            // 
+            // cusid
+            // 
+            this.cusid.DataPropertyName = "cusid";
+            this.cusid.HeaderText = "cusid";
+            this.cusid.MinimumWidth = 6;
+            this.cusid.Name = "cusid";
+            this.cusid.ReadOnly = true;
+            this.cusid.Visible = false;
+            this.cusid.Width = 125;
+            // 
+            // bookid
+            // 
+            this.bookid.DataPropertyName = "bookid";
+            this.bookid.HeaderText = "bookid";
+            this.bookid.MinimumWidth = 6;
+            this.bookid.Name = "bookid";
+            this.bookid.ReadOnly = true;
+            this.bookid.Visible = false;
+            this.bookid.Width = 125;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Book Title";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 304;
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "price";
+            this.price.HeaderText = "Price";
+            this.price.MinimumWidth = 6;
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            this.price.Width = 110;
+            // 
+            // quantity
+            // 
+            this.quantity.DataPropertyName = "quantity";
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.MinimumWidth = 6;
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            // 
+            // totalprice
+            // 
+            this.totalprice.DataPropertyName = "totalprice";
+            this.totalprice.HeaderText = "Total";
+            this.totalprice.Name = "totalprice";
+            this.totalprice.ReadOnly = true;
+            this.totalprice.Width = 110;
             // 
             // label9
             // 
@@ -534,70 +599,6 @@ namespace BookStoreManagement.View
             // 
             this.bunifuElipse2.ElipseRadius = 20;
             this.bunifuElipse2.TargetControl = this;
-            // 
-            // invoiceid
-            // 
-            this.invoiceid.DataPropertyName = "invoiceid";
-            this.invoiceid.HeaderText = "invoceid";
-            this.invoiceid.MinimumWidth = 6;
-            this.invoiceid.Name = "invoiceid";
-            this.invoiceid.ReadOnly = true;
-            this.invoiceid.Visible = false;
-            this.invoiceid.Width = 125;
-            // 
-            // cusid
-            // 
-            this.cusid.DataPropertyName = "cusid";
-            this.cusid.HeaderText = "cusid";
-            this.cusid.MinimumWidth = 6;
-            this.cusid.Name = "cusid";
-            this.cusid.ReadOnly = true;
-            this.cusid.Visible = false;
-            this.cusid.Width = 125;
-            // 
-            // bookid
-            // 
-            this.bookid.DataPropertyName = "bookid";
-            this.bookid.HeaderText = "bookid";
-            this.bookid.MinimumWidth = 6;
-            this.bookid.Name = "bookid";
-            this.bookid.ReadOnly = true;
-            this.bookid.Visible = false;
-            this.bookid.Width = 125;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Book Title";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 304;
-            // 
-            // price
-            // 
-            this.price.DataPropertyName = "price";
-            this.price.HeaderText = "Price";
-            this.price.MinimumWidth = 6;
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            this.price.Width = 110;
-            // 
-            // quantity
-            // 
-            this.quantity.DataPropertyName = "quantity";
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.MinimumWidth = 6;
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
-            // 
-            // totalprice
-            // 
-            this.totalprice.DataPropertyName = "totalprice";
-            this.totalprice.HeaderText = "Total";
-            this.totalprice.Name = "totalprice";
-            this.totalprice.ReadOnly = true;
-            this.totalprice.Width = 110;
             // 
             // ViewCheckout
             // 

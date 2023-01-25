@@ -16,7 +16,7 @@ namespace BookStoreManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.ViewHome());
+            Application.Run(new View.ViewLogin());
         }
     }
 }

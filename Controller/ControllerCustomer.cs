@@ -86,5 +86,13 @@ namespace BookStoreManagement.Controller
             viewCustomer.txtContactCustomer.Text = modelCustomer.contactCustomerTemp;
             viewCustomer.txtAddressCustomer.Text = modelCustomer.addressCustomerTemp;
         }
+        public void reqClear()
+        {
+            viewCustomer.txtIdCustomer.Clear();
+            viewCustomer.txtNameCustomer.Clear();
+            viewCustomer.txtContactCustomer.Clear();
+            viewCustomer.txtAddressCustomer.Clear();
+            this.reqId();
+        }
     }
 }

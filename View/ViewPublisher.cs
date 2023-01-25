@@ -66,5 +66,9 @@ namespace BookStoreManagement.View
             controllerPublisher.reqCellPublisher();
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            controllerPublisher.reqClear();
+        }
     }
 }

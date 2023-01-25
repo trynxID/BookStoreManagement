@@ -73,5 +73,11 @@ namespace BookStoreManagement.Controller
             viewCategory.txtNameCategory.Text = modelCategory.nameCategoryTemp;
             
         }
+        public void reqClear()
+        {
+            viewCategory.txtIdCategory.Clear();
+            viewCategory.txtNameCategory.Clear();
+            this.reqId();
+        }
     }
 }

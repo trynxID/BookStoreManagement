@@ -151,7 +151,7 @@ namespace BookStoreManagement.View
             this.btnEmployee.ForeColor = System.Drawing.Color.White;
             this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(16, 576);
+            this.btnEmployee.Location = new System.Drawing.Point(16, 570);
             this.btnEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(248, 50);
@@ -190,7 +190,7 @@ namespace BookStoreManagement.View
             this.btnPublisher.ForeColor = System.Drawing.Color.White;
             this.btnPublisher.Image = ((System.Drawing.Image)(resources.GetObject("btnPublisher.Image")));
             this.btnPublisher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPublisher.Location = new System.Drawing.Point(16, 221);
+            this.btnPublisher.Location = new System.Drawing.Point(16, 219);
             this.btnPublisher.Margin = new System.Windows.Forms.Padding(4);
             this.btnPublisher.Name = "btnPublisher";
             this.btnPublisher.Size = new System.Drawing.Size(251, 50);
@@ -208,7 +208,7 @@ namespace BookStoreManagement.View
             this.btnCheckout.ForeColor = System.Drawing.Color.White;
             this.btnCheckout.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckout.Image")));
             this.btnCheckout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheckout.Location = new System.Drawing.Point(16, 506);
+            this.btnCheckout.Location = new System.Drawing.Point(16, 435);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(248, 50);
@@ -226,7 +226,7 @@ namespace BookStoreManagement.View
             this.btnOrders.ForeColor = System.Drawing.Color.White;
             this.btnOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnOrders.Image")));
             this.btnOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrders.Location = new System.Drawing.Point(16, 435);
+            this.btnOrders.Location = new System.Drawing.Point(16, 504);
             this.btnOrders.Margin = new System.Windows.Forms.Padding(4);
             this.btnOrders.Name = "btnOrders";
             this.btnOrders.Size = new System.Drawing.Size(251, 50);
@@ -244,7 +244,7 @@ namespace BookStoreManagement.View
             this.btnCustomers.ForeColor = System.Drawing.Color.White;
             this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
             this.btnCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomers.Location = new System.Drawing.Point(16, 365);
+            this.btnCustomers.Location = new System.Drawing.Point(16, 360);
             this.btnCustomers.Margin = new System.Windows.Forms.Padding(4);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.Size = new System.Drawing.Size(251, 50);
@@ -262,7 +262,7 @@ namespace BookStoreManagement.View
             this.btnProducts.ForeColor = System.Drawing.Color.White;
             this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
             this.btnProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducts.Location = new System.Drawing.Point(16, 295);
+            this.btnProducts.Location = new System.Drawing.Point(16, 292);
             this.btnProducts.Margin = new System.Windows.Forms.Padding(4);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(251, 50);
@@ -280,7 +280,7 @@ namespace BookStoreManagement.View
             this.btnCategories.ForeColor = System.Drawing.Color.White;
             this.btnCategories.Image = ((System.Drawing.Image)(resources.GetObject("btnCategories.Image")));
             this.btnCategories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategories.Location = new System.Drawing.Point(16, 153);
+            this.btnCategories.Location = new System.Drawing.Point(16, 152);
             this.btnCategories.Margin = new System.Windows.Forms.Padding(4);
             this.btnCategories.Name = "btnCategories";
             this.btnCategories.Size = new System.Drawing.Size(251, 50);
